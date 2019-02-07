@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScriptAzzaElgendy</title>
+		<link rel="stylesheet" href="styles/main.css">
+		<script type="text/javascript">
+		  	function myFunction(){
+				
+		  		var number = document.getElementById("number").value;
+				var totalEven=0;
+				var totalOdd=0;
+				var countEven = 0;
+				var countOdd = 0;
+				
+					if(isNaN(number))
+					{
+						alert(number +" This Is not a number!");
+					} 
+					else if(number==0)
+					{
+						alert("This Is :  "+ number +"  It is not allowed");
+					}  
+    
+		  		  	else
+			  		{    
+		 			   for (i = 0; i < number.length; i++)
+			  			{
+				  	   
+	  
+		 			  			if ((number[i] % 2) == 0)
+		 			   			{
+		 	
+									//alert(number[i].length)
+									totalEven += JSON.parse(number[i]);
+									countEven++;
+									
+	
+		 			   			}
+		 			   	 		if ((number[i] % 2) == 1)
+		 			  			{	
+		 	
+
+									totalOdd += JSON.parse(number[i]);
+									countOdd++;
+
+									 
+									
+	
+		 			   			}
+
+						}
+
+						/*alert("Total of even Numbers are "+ totalEven);
+						alert("Average of Even Numbers= "+totalEven/countEven);
+						alert("Total of Odd Numbers are "+ totalOdd);
+						alert("Average of Odd Numbers = "+totalOdd/countOdd);*/
+						
+						document.getElementById("xx").innerHTML=totalEven/countEven;
+						document.getElementById("yy").innerHTML=totalOdd/countOdd;
+						document.getElementById("even").innerHTML=totalEven;
+						document.getElementById("odd").innerHTML=totalOdd;
+					}
+
+
+
+
+
+
+
+
+				}
+
+		  </script>
+	</head>
+    <header> <!--  header section of the page  -->
+        <hgroup>
+			<p>
+				<h1>Even and Odd</h1>
+				<h1>Sum Of Numbers</h1>
+			</p>
+			
+		</hgroup>
+         	<div class="line"></div>               
+        	<nav id="nav_menu">
+				<ul>
+					<li><a href="A1AElgendy.html" >Home</a></li>
+					<li><a href="A1AElgendy.html">Math</a></li>
+				</ul>
+			<div class="line"></div>
+	</header>
+	<body>
+		<aside id="sidebarA">
+			<p>Click the button to Enter a number.</p>
+				<br/><br/>
+			
+				Enter No:<input id="number" name="number"><br/>  
+				<button id="button" onclick="myFunction()">Click for result</button>
+				
+			
+			
+		</aside>
+		
+	<main>
+		<h2>Instruction</h2>
+		<h3><a href=""><img src="images/logo.gif" alt="Logo" width="100" height="100"></a></h3>
+		<!--image source https://thumbs.gfycat.com/AnchoredIgnorantBorer-max-1mb.gif-->
+		<p>
+			<ol>
+				<li>This page allows users to enter a number</li>
+				<li>Users can enter as many number as they want</li>
+				<li>Non numeric values are not allowed</li>
+				<li>zero or empty entries are not allowed</li>
+				<li>the application will split the entered numbers in to even and odd number </li>
+				<li>The application will provide the sum and average of each group</li>
+			</ol>
+		</p>
+	</main>
+		<aside id="sidebarB">
+			<p>Total Even: <span id="even"></span></p>
+			<p>Total Odd:<span id="odd"></span> </p>
+			<p>Average Even <span id="xx"></span></p>
+			<p>Average Odd <span id="yy"></span></p>
+		</aside>
+	</body>
+	    <footer> <!-- Marking the footer section -->
+
+           <div class="line"></div>
+           
+           <p>&copy; Copyright 2018 - AzzaElgendy.com</p> <!-- Change the copyright notice -->
+         
+        </footer>
+	
+</html>
